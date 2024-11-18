@@ -17,6 +17,20 @@ html {
   position: relative;
 }
 
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  filter: blur(8px);
+  z-index: 1;
+}
+
 .overlay {
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -25,12 +39,15 @@ html {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .content {
   max-width: 500px;
   color: #fff;
   text-align: center;
+  z-index: 3;
 }
 
 .product-image {
